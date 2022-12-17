@@ -1,5 +1,6 @@
 class Solution {
     //only one number is duplicated implies first index having incorrect number is your ans for repitition . 
+    //Index+1 is the missing number 
     public int[] findErrorNums(int[] nums) {
         int[] arr = new int[2];
         cycleSort(nums);
