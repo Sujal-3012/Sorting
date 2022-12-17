@@ -6,8 +6,8 @@ class Solution {
         int i = 0;
         while(i < nums.length){
             if (nums[i] != (i + 1)){
-                arr.add(i + 1);
-                i++;
+                arr.add(i + 1); //add the missing elemnt 
+                i++; //move forward
             }else{
                 i++;
             }
@@ -19,6 +19,10 @@ class Solution {
         while(i < arr.length){
             int correct = arr[i] - 1;
             //here last element can also be placed
+            //don't do sorting f the required element is already there at the required index 
+            //array has 1-n elements implies element should be at (element-1) index .
+            //ex. {3 , 2 , 3 , 4 , 8 , 2 , 7}
+            //Is 3 at correct index -> no -> swap with index 2 (3-1) , but 3 is already at index 2 ->skip this . 
             if ((arr[i] != i + 1) && (arr[correct] != arr[i])){
                 swap(arr , i , correct);
             } else {
