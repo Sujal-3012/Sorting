@@ -1,8 +1,9 @@
 class Solution {
-    //Here it is clear that arraylength number will also be present at last 
+    //Here it is clear that arraylength number will also be present at last after sorting 
     public int missingNumber(int[] nums) {
         cycleSort(nums);
-        //search for misiing number 
+        //search for missing number 
+        //first index containing wrong no. will be your answer.
         for (int i = 0 ; i < nums.length ; i++){
             if (nums[i] != i){
                 return i;
