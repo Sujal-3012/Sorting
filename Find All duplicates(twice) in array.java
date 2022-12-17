@@ -1,4 +1,6 @@
 class Solution {
+    //It is totally same as find missing numbers from array([1,n]) , only change is here we are recording the numbers which are at the place of missing 
+    //numbers as they are repitition , and here we require list of repeated numbers .
     public List<Integer> findDuplicates(int[] nums) {
         cycleSort(nums);
         List<Integer> arr = new ArrayList<>();
