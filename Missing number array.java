@@ -1,5 +1,6 @@
 class Solution {
     public static List<Integer> findDisappearedNumbers(int[] nums) {
+        //We may have any no. of elements missing in between 1 to n , so our ans will be of variable length ,that's why we have used Arraylist
         List<Integer> arr = new ArrayList<>();
         cycleSort(nums);
         //search the disappeared ones
